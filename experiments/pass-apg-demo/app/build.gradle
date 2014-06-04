@@ -1,0 +1,41 @@
+buildscript {
+    repositories {
+        maven { url 'http://repo1.maven.org/maven2' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.4'
+    }
+}
+apply plugin: 'android'
+
+
+repositories {
+    maven { url 'https://oss.sonatype.org/content/repositories/releases' }
+    mavenCentral()
+}
+
+configurations {
+    //debugCompile.extendsFrom(compile)
+}
+
+dependencies {
+    compile files('libs/android-support-v4.jar')
+    compile 'com.squareup.dagger:dagger:1.0.0'
+    compile 'com.squareup.dagger:dagger-compiler:1.0.0'
+    compile 'com.squareup:otto:1.3.3'
+    compile 'com.github.kevinsawicki:http-request:3.0'
+    compile 'com.madgag:scpg-jdk15on:1.47.0.2'
+    compile 'com.jakewharton:butterknife:1.3.2'
+    compile 'commons-io:commons-io:2.4'
+    compile 'com.google.guava:guava:14.0.1'
+}
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "17.0.0"
+
+    defaultConfig {
+        minSdkVersion 10
+        targetSdkVersion 16
+    }
+}
