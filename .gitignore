@@ -4,3 +4,8 @@
 .gradle/
 local.properties
 build/
+.classpath
+.project
+bin/
+gen/
+.settings/
